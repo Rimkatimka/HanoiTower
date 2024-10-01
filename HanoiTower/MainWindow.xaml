@@ -1,0 +1,22 @@
+﻿<Window x:Class="HanoiTower.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hanoi Tower" Height="450" Width="600">
+    <Grid Background="AliceBlue">
+        <!-- Панель управления -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <TextBlock Text="Количество дисков:" VerticalAlignment="Center" Margin="5"/>
+            <TextBox Name="diskCountTextBox" Width="50" VerticalAlignment="Center" Text="3" />
+            <Button Content="Старт" Click="StartButton_Click" Margin="10,0" Padding="10,5"/>
+        </StackPanel>
+
+        <!-- Отображение количества ходов -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,50,10,0">
+            <TextBlock Text="Ходы:" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Name="moveCounterTextBlock" Text="0" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <!-- Поле для отрисовки игры -->
+        <Canvas Name="canvas" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,50,0,0"/>
+    </Grid>
+</Window>
